@@ -1,0 +1,47 @@
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent">
+<com.google.android.material.card.MaterialCardView
+    android:id="@+id/CardViewAttendanceEmployee"
+    android:layout_width="match_parent"
+    android:backgroundTint="@color/card_bg"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    >
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/ViewAttendaceStudentName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Student Name"
+        android:layout_gravity="center"
+        android:fontFamily="serif"
+        android:layout_margin="5dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        />
+
+    <TextView
+        android:id="@+id/ViewAttendaceEnrollment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enrollment Number"
+        android:layout_gravity="center"
+        android:fontFamily="serif"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:layout_margin="5dp"
+        />
+    <Button
+        android:id="@+id/ViewAttBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:text="view"
+        />
+</LinearLayout>
+</com.google.android.material.card.MaterialCardView>
+</LinearLayout>

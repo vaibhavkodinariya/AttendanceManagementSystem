@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">GLS-FCIT-AMS</string>
+    <string name="username">Username</string>
+    <string name="welcome_string">Welcome to GLS university’s Attendance Management Application</string>
+    <string name="password">Password</string>
+    <string name="loginButton">login</string>
+    <string name="visionString">"\"To develop a leadership which is capable, compassionate, conscious and committed to the common good.\""</string>
+    <string name="student_name">Student name</string>
+    <string name="enrollment_user_id">Enrollment/User ID</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string-array name="Month_array">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+</resources>

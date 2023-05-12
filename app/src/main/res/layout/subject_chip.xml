@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingTop="5dp"
+    android:paddingStart="5dp"
+    >
+    <com.google.android.material.chip.Chip
+        android:id="@+id/subjects"
+        android:backgroundTint="?attr/colorPrimary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Internet of Things"
+        android:textColor="?attr/colorOnPrimary"
+        android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+        />
+</LinearLayout>

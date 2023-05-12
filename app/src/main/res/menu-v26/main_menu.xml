@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="HardcodedText"
+    >
+    <group android:id="@+id/grp1" >
+    <item
+        android:id="@+id/menu_home"
+        android:checked="true"
+        android:iconTint="?attr/colorOnPrimary"
+        android:icon="@drawable/baseline_home_24"
+        android:title="Home" />
+    </group>
+    <group android:id="@+id/grp2" >
+    <item
+        android:id="@+id/menu_profile"
+        android:checked="true"
+        android:icon="@drawable/vector"
+        android:title="Profile" />
+    </group>
+    <group android:id="@+id/grp3" >
+    </group>
+    <group android:id="@+id/grp4">
+    <item
+        android:id="@+id/menu_logout"
+        android:checked="true"
+        android:icon="@drawable/baseline_logout_24"
+        android:title="Logout" />
+    </group>
+</menu>

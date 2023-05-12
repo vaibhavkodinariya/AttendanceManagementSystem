@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:debuggable="true"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AttendanceManagementSystem"
+        android:usesCleartextTraffic="true"
+        tools:ignore="HardcodedDebugMode"
+        tools:targetApi="31">
+        <activity
+            android:name=".ViewUserActivity"
+            android:parentActivityName=".DeleteUserActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ViewQuerySuperuserActivity"
+            android:parentActivityName=".HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DeleteUserActivity"
+            android:parentActivityName=".HomeActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ViewAttendanceSuperuserActivity"
+            android:parentActivityName=".HomeActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ManageTeacherStudentActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".EmloyeeQueryActivity"
+            android:parentActivityName=".HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UpdateAttendanceActivity"
+            android:parentActivityName=".UpdateAttendanceDateEmployee"
+            android:exported="false" />
+        <activity
+            android:name=".SelectDetailsViewAttendanceActivity"
+            android:parentActivityName=".HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ViewAttendanceEmployee"
+            android:exported="false" />
+        <activity
+            android:name=".UpdateAttendanceDateEmployee"
+            android:parentActivityName=".HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".StudentQueryActivity"
+            android:parentActivityName=".HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SubjectWiseAttendanceActivity"
+            android:parentActivityName=".HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MonthlyAttendanceActivity"
+            android:parentActivityName=".HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DailyAttendanceActivity"
+            android:parentActivityName=".HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BarGraphActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SelectDetailsTakeAttendance"
+            android:exported="false"
+            android:parentActivityName=".HomeActivity" />
+        <activity
+            android:name=".TakeAttendanceActivity"
+            android:exported="false"
+            android:parentActivityName=".SelectDetailsTakeAttendance" />
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="false"
+            android:parentActivityName=".HomeActivity" />
+        <activity
+            android:name=".HomeActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true" />
+    </application>
+
+</manifest>

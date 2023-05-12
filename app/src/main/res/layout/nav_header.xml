@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/colorPrimary"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+        android:id="@+id/circularRevealCardView"
+        android:layout_width="90sp"
+        android:layout_height="90sp"
+        android:backgroundTint="?attr/colorOnPrimary"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:cardCornerRadius="100dp"
+        >
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/malegif"
+            android:visibility="visible"
+            android:layout_width="90sp"
+            android:layout_height="90sp"
+             />
+    </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+
+
+    <TextView
+        android:id="@+id/Username"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:text="@string/student_name"
+        android:textColor="?attr/colorOnPrimary"
+        app:layout_constraintStart_toEndOf="@id/circularRevealCardView"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="25dp"
+        />
+
+    <TextView
+        android:id="@+id/Userid"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:text="@string/enrollment_user_id"
+        android:textColor="?attr/colorOnPrimary"
+        app:layout_constraintStart_toEndOf="@id/circularRevealCardView"
+        android:fontFamily="serif"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Username"
+        android:layout_marginStart="20dp"
+        android:textAppearance="@style/TextAppearance.Material3.BodySmall" />
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/errorinfo"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="@string/please_logged_in_first"-->
+    <!--        android:visibility="gone"-->
+    <!--        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />-->
+</androidx.constraintlayout.widget.ConstraintLayout>

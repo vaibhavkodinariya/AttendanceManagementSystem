@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?attr/colorPrimary"
+    tools:context=".ViewQuerySuperuserActivity">
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/EmployeeQuerySU"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/card_bg"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/EmployeeTypeQuerySUDropdown"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="26dp"
+                app:boxStrokeColor="@color/blue_college"
+                app:hintTextColor="@color/blue_college"
+                android:hint="Select Employee Type"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/EmployeeQuerySUDropdown"
+                app:layout_constraintStart_toStartOf="parent"
+                >
+
+                <AutoCompleteTextView
+                    android:id="@+id/AutoCompleteEmployeeTypeQuerySU"
+                    android:layout_width="match_parent"
+                    android:textColorHint="@color/blue_college"
+                    android:textColor="@color/blue_college"
+                    android:layout_height="wrap_content"
+                    android:inputType="none" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/EmployeeQuerySUDropdown"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="25dp"
+                app:boxStrokeColor="@color/blue_college"
+                app:hintTextColor="@color/blue_college"
+                android:hint="Select Employee"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                >
+
+                <AutoCompleteTextView
+                    android:id="@+id/AutoCompleteEmployeeQuerySU"
+                    android:layout_width="match_parent"
+                    android:textColorHint="@color/blue_college"
+                    android:textColor="@color/blue_college"
+                    android:layout_height="wrap_content"
+                    android:inputType="none" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <TextView
+                android:id="@+id/HiddenEmployeeIdSU"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+    <GridView
+        android:id="@+id/ViewQuerySuGrid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

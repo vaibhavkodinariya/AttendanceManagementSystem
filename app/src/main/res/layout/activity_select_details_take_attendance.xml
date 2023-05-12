@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp"
+    android:orientation="vertical"
+    tools:context=".SelectDetailsTakeAttendance">
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/card_bg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/subjectDropDown"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="25dp"
+                app:boxStrokeColor="@color/blue_college"
+                app:hintTextColor="@color/blue_college"
+                android:hint="Subjects"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/date"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <AutoCompleteTextView
+                    android:id="@+id/AutoCompleteSubjects"
+                    android:layout_width="match_parent"
+                    android:textColorHint="@color/blue_college"
+                    android:textColor="@color/blue_college"
+                    android:fontFamily="serif"
+                    android:layout_height="wrap_content"
+                    android:inputType="none" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="25dp"
+                android:text="Date"
+                android:fontFamily="serif"
+                android:textColor="@color/blue_college"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/subjectDropDown"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/Cancle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancel"
+                android:visibility="gone"
+                android:backgroundTint="?attr/colorOnPrimary"
+                android:textColor="?attr/colorPrimary"
+                android:elevation="1dp"
+                android:fontFamily="serif"
+                app:layout_constraintTop_toBottomOf="@id/subjectDropDown"
+                app:layout_constraintStart_toEndOf="@id/date"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".TakeAttendanceActivity">
+
+        <CheckBox
+            android:id="@+id/CheckboxAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select All"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/takeStudent"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/submitAttendance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit"/>
+        <TextView
+            android:id="@+id/NoDataId"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="No Data Found !"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textAlignment="center"
+            />
+    </LinearLayout>
+</LinearLayout>

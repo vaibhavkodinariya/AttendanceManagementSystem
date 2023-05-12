@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SelectDetailsTakeAttendance">
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/CreateQueryCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="1dp"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/subjectDropDownQuery"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="25dp"
+                android:hint="Subjects"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <AutoCompleteTextView
+                    android:id="@+id/AutoCompleteSubjectsQuery"
+                    android:layout_width="match_parent"
+                    android:fontFamily="serif"
+                    android:textColorHint="@color/blue_college"
+                    android:textColor="@color/blue_college"
+                    android:layout_height="wrap_content"
+                    android:inputType="none" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/QueryEmployeeDropdown"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="25dp"
+                app:boxStrokeColor="@color/blue_college"
+                app:hintTextColor="@color/blue_college"
+                android:hint="Select Query for whom"
+                app:layout_constraintBottom_toTopOf="@+id/Discription"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/subjectDropDownQuery">
+
+                <AutoCompleteTextView
+                    android:id="@+id/AutoCompleteEmployeeQuery"
+                    android:layout_width="match_parent"
+                    android:fontFamily="serif"
+                    android:textColorHint="@color/blue_college"
+                    android:textColor="@color/blue_college"
+                    android:layout_height="wrap_content"
+                    android:inputType="none" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/Discription"
+                android:layout_width="match_parent"
+                android:layout_margin="25dp"
+                android:layout_height="wrap_content"
+                android:labelFor="@id/DiscriptionField"
+                app:layout_constraintStart_toStartOf="@+id/QueryEmployeeDropdown"
+                app:layout_constraintTop_toBottomOf="@+id/QueryEmployeeDropdown"
+                app:layout_constraintEnd_toEndOf="@+id/QueryEmployeeDropdown"
+                android:layout_marginBottom="20dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/DiscriptionField"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="50dp"
+                    android:fontFamily="serif"
+                    android:hint="Description"
+                    android:textColor="@color/blue_college"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/Send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="1dp"
+                android:layout_margin="10dp"
+                android:fontFamily="serif"
+                android:text="Send"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+
+                app:layout_constraintTop_toBottomOf="@+id/Discription" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+    <GridView
+        android:id="@+id/ViewQueryGridView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/colorPrimary"
+        app:layout_constraintTop_toBottomOf="@+id/CreateQueryCard"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+    </GridView>
+</LinearLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--on below line we are creating a swipe to refresh layout-->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    tools:context=".BarGraphActivity">
+
+    <TextView
+        android:id="@+id/idTVHead"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:gravity="center"
+        android:padding="4dp"
+        android:text="Bar Chart"
+        android:textAlignment="center"
+        android:textColor="@color/blue_college"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!--Ui component for our bar chart-->
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/idBarChart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/idTVHead" />
+
+</RelativeLayout>

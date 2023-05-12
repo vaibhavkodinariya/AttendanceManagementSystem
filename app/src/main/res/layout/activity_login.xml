@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:id="@+id/backgroundWhite"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+    <ImageView
+        android:id="@+id/logoNew"
+        android:layout_width="match_parent"
+        android:layout_height="182dp"
+        android:background="@drawable/logonew"
+        app:layout_constraintStart_toStartOf="@+id/backgroundWhite"
+        app:layout_constraintTop_toTopOf="@+id/backgroundWhite"
+        app:layout_constraintEnd_toEndOf="@+id/backgroundWhite"
+        android:layout_margin="9dp"
+        />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="476dp"
+        android:layout_marginStart="-10dp"
+        android:layout_marginEnd="-10dp"
+        android:background="@drawable/logotransparent"
+        app:layout_constraintTop_toBottomOf="@+id/logoNew" />
+    <TextView
+        android:id="@+id/welcomeString"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="serif"
+        android:text="@string/welcome_string"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="@id/logoNew"
+        app:layout_constraintStart_toStartOf="@id/logoNew"
+        app:layout_constraintTop_toBottomOf="@id/logoNew" />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/setUsername"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:labelFor="@id/setUsername"
+        app:layout_constraintEnd_toEndOf="@id/welcomeString"
+        app:layout_constraintStart_toStartOf="@id/welcomeString"
+        app:layout_constraintTop_toBottomOf="@id/welcomeString">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/Username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+            android:hint="@string/username"
+            android:maxLines="1" />
+        <!--            android:maxLength="8"-->
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/setPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        app:endIconMode="password_toggle"
+        app:layout_constraintTop_toBottomOf="@id/setUsername"
+        app:layout_constraintStart_toStartOf="@id/setUsername"
+        app:layout_constraintEnd_toEndOf="@id/setUsername"
+        android:labelFor="@id/setPassword"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/Password"
+            android:layout_width="match_parent"
+            android:maxLines="1"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+            android:inputType="textPassword"
+            android:hint="@string/password"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/loginButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/loginButton"
+        android:fontFamily="serif"
+        app:cornerRadius="50dp"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintStart_toStartOf="@id/setPassword"
+        app:layout_constraintEnd_toEndOf="@+id/setPassword"
+        app:layout_constraintBottom_toTopOf="@+id/visionString"
+        />
+
+    <TextView
+        android:id="@+id/visionString"
+        android:layout_width="336dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="@string/visionString"
+        android:fontFamily="serif"
+        app:layout_constraintStart_toStartOf="@+id/loginButton"
+        app:layout_constraintEnd_toEndOf="@+id/loginButton"
+        android:layout_marginBottom="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

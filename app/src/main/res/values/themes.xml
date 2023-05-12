@@ -1,0 +1,36 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.AttendanceManagementSystem" parent="Theme.MaterialComponents.DayNight">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/blue_college</item>
+        <item name="colorPrimaryVariant">@color/white_gray</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="android:windowBackground">@color/white</item>
+        <item name="colorSecondary">@color/blue_college</item>
+        <item name="colorSecondaryVariant">@color/blue_college</item>
+        <item name="colorOnSecondary">@color/blue_college</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <!-- Customize your theme here. -->
+        <item name="android:textColor">@color/blue_college</item>
+        <item name="actionBarTheme">@style/Widget.AppCompat.Light.ActionBar</item>
+        <item name="actionBarStyle">@style/LightActionBarTheme</item>
+        <item name="color">@color/white</item>
+        <item name="labelStyle">@color/blue_college</item>
+        <!--        <item name="android:windowTranslucentStatus">true</item>-->
+    </style>
+    <style name="LightActionBarTheme" parent="Theme.MaterialComponents.DayNight">
+        <item name="background">@color/white</item>
+        <item name="actionMenuTextColor">@color/blue_college</item>
+        <item name="android:background">@color/white</item>
+        <item name="titleTextStyle">@style/styleActionBarTitleText</item>
+    </style>
+    <style name="styleActionBarTitleText" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/blue_college</item>
+        <item name="textFillColor">@color/blue_college</item>
+        <item name="actionMenuTextColor">@color/blue_college</item>
+        <item name="titleTextColor">@color/white</item>
+    </style>
+</resources>

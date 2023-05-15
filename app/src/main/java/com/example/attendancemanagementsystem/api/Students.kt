@@ -12,8 +12,7 @@ import java.net.URL
 
 class Students : AppCompatActivity() {
     companion object{
-        val ipaddress = "172.16.3.189:5000" //GLS - aruba
-//        val ipaddress = "10.200.246.86:5000" // Private
+        val ipaddress = "" // enter your network IP
         fun login(Data : String, Password : String, Type : String) : JSONObject{
             val jsonLogin = JSONObject()
             jsonLogin.put("data",Data)
